@@ -69,28 +69,41 @@ const sidebars = {
           type: "category",
           label: "Cloud Reference Architecture",
           items: [
-            "useful-links/cloud-reference/azure",
-            "useful-links/cloud-reference/aws",
-            "useful-links/cloud-reference/google-cloud",
+            "library/cloud-reference/azure",
+            "library/cloud-reference/aws",
+            "library/cloud-reference/google-cloud",
           ],
         },
         {
           type: "category",
           label: "Community",
-          items: ["useful-links/community/community-sites"],
+          items: ["library/community/community-sites"],
         },
         {
           type: "category",
           label: "Tools Documentation",
           items: [
-            "useful-links/tools-docs/terraform",
-            "useful-links/tools-docs/bash",
-            "useful-links/tools-docs/powershell",
-            "useful-links/tools-docs/coreutils",
-            "useful-links/tools-docs/linux",
+            "library/script docs/terraform",
+            "library/script docs/bash",
+            "library/script docs/powershell",
+            "library/script docs/coreutils",
+            "library/script docs/linux",
           ],
         },
       ],
+    },
+  ],
+
+  // GitHub Library sidebar
+  githubLibrarySidebar: [
+    {
+      type: "category",
+      label: "GitHub lib",
+      link: {
+        type: "generated-index",
+        description: "Useful GitHub repos",
+      },
+      items: ["library/github/github"],
     },
   ],
 };

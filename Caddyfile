@@ -1,5 +1,5 @@
 # This tells Caddy to respond to "joeinsight" or "localhost"
-joeinsight, localhost, :80 {
+localhost, :2000 {
     # The directory where the Docusaurus build output lives
     root * /var/www/html
     

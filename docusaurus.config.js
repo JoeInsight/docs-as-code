@@ -15,7 +15,7 @@ const config = {
   // Set the production url of your site here
   url: "https://joeinsight.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: "/docs-as-code/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   organizationName: "JoeInsight",
@@ -76,6 +76,12 @@ const config = {
             label: "Useful Links",
           },
           {
+            type: "docSidebar",
+            sidebarId: "githubLibrarySidebar",
+            position: "left",
+            label: "GitHub lib",
+          },
+          {
             href: "https://github.com/JoeInsight/docs-as-code",
             label: "GitHub",
             position: "right",
@@ -104,7 +110,7 @@ const config = {
           {
             title: "More",
             items: [
-              { label: "GitHub", href: "https://github.com/JoeInsight/docs-as-code" },
+              { label: "GitHub", href: "https://github.com/JoeInsight" },
             ],
           },
         ],

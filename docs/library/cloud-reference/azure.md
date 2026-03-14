@@ -20,6 +20,8 @@ and documentation.
 | Azure Architecture Diagrams | [learn.microsoft.com/azure/architecture/browse](https://learn.microsoft.com/en-us/azure/architecture/browse/) | Searchable browseable architecture diagrams |
 | Azure Landing Zones | [learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) | Enterprise-scale landing zone patterns |
 | Azure Cloud Adoption Framework | [learn.microsoft.com/azure/cloud-adoption-framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/) | Guidance for cloud strategy, planning, and adoption |
+| Microsoft Troubleshooting | [Microsoft Troubleshooting doc](https://learn.microsoft.com/en-us/troubleshoot/)|
+| Azure FinOps | [Azure FinOps Hub](https://learn.microsoft.com/en-us/cloud-computing/finops/toolkit/hubs/finops-hubs-overview)|
 
 ---
 
