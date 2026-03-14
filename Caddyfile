@@ -1,0 +1,17 @@
+# This tells Caddy to respond to "joeinsight" or "localhost"
+joeinsight, localhost, :80 {
+    # The directory where the Docusaurus build output lives
+    root * /var/www/html
+    
+    # Compression for faster loading
+    encode gzip
+
+    # Essential for Docusaurus page refreshes
+    try_files {path} {path}/ /index.html
+
+    # Enables the static file server
+    file_server
+
+    # Set a header so you can see it's working
+    header Server "JoeInsight-Portal"
+}
