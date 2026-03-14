@@ -1,0 +1,8 @@
+{
+  "label": "Cloud Reference Architecture",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Reference architecture links for major cloud providers."
+  }
+}

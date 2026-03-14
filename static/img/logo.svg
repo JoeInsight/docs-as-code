@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="20" fill="#0066cc"/>
+  <text x="100" y="90" font-family="monospace" font-size="48" font-weight="bold" fill="white" text-anchor="middle">D</text>
+  <text x="100" y="145" font-family="monospace" font-size="20" fill="white" text-anchor="middle">as Code</text>
+</svg>
