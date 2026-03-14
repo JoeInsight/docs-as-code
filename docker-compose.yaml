@@ -1,0 +1,21 @@
+services:
+  # Development server with live reload
+  docs-dev:
+    image: node:lts-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - WATCHPACK_POLLING=true
+    command: sh -c "npm install && npm start -- --host 0.0.0.0 --poll 1000"
+
+  # Production build served by Caddy
+  docs-prod:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8080:80"

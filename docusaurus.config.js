@@ -71,15 +71,9 @@ const config = {
           },
           {
             type: "docSidebar",
-            sidebarId: "usefulLinksSidebar",
+            sidebarId: "librarySidebar",
             position: "left",
-            label: "Useful Links",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "githubLibrarySidebar",
-            position: "left",
-            label: "GitHub lib",
+            label: "Library",
           },
           {
             href: "https://github.com/JoeInsight/docs-as-code",

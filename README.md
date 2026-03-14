@@ -1,6 +1,6 @@
 # docs-as-code
 
-A living knowledge base built with [Docusaurus v3](https://docusaurus.io/) and maintained as code alongside the infrastructure and scripts it documents.
+A living knowledge base built with [Docusaurus v3](https://docusaurus.io/) and maintained as code alongside the infrastructure and scripts it documents. Served locally via Docker with Caddy (production) or the Docusaurus dev server (development with live reload).
 
 ## Sections
 
@@ -8,9 +8,10 @@ A living knowledge base built with [Docusaurus v3](https://docusaurus.io/) and m
 |---|---|
 | **Scripts & Source Code** | Custom Bash, PowerShell, Terraform, and Python scripts |
 | **Post-Mortems** | Incident reviews and lessons learned |
-| **Useful Links – Cloud Reference** | Azure, AWS, and Google Cloud reference architecture links |
-| **Useful Links – Community** | DevOps and cloud community sites, forums, and newsletters |
-| **Useful Links – Tools Docs** | Terraform, Bash, PowerShell, CoreUtils, and Linux documentation |
+| **Library – Cloud Reference** | Azure, AWS, and Google Cloud reference architecture links |
+| **Library – Community** | DevOps and cloud community sites, forums, and newsletters |
+| **Library – Tools Docs** | Terraform, Bash, PowerShell, CoreUtils, and Linux documentation |
+| **Library – GitHub** | Useful GitHub repos to follow |
 
 ## Folder Structure
 
@@ -25,36 +26,93 @@ docs-as-code/
 │   │   ├── terraform/
 │   │   └── python/
 │   ├── post-mortems/               # Lessons learned
-│   │   ├── template.md             # Blank post-mortem template
-│   │   └── example-incident.md    # Filled-out example
-│   └── useful-links/               # Curated reference links
+│   │   ├── template.md
+│   │   └── example-incident.md
+│   └── library/                    # Curated reference links
 │       ├── cloud-reference/        # Azure, AWS, Google Cloud
 │       ├── community/              # Community websites
-│       └── tools-docs/             # Terraform, Bash, PowerShell, CoreUtils, Linux
+│       ├── script docs/            # Terraform, Bash, PowerShell, CoreUtils, Linux
+│       └── github/                 # Useful GitHub repos
 ├── src/
 │   ├── css/custom.css
-│   └── pages/index.js             # Homepage
+│   └── pages/index.js              # Homepage
 ├── static/img/
+├── caddyfile                        # Caddy web server config
+├── dockerfile                       # Multi-stage production build
+├── docker-compose.yaml              # Dev + prod Docker services
 ├── docusaurus.config.js
-├── sidebars.js
+├── sidebars.js                      # Auto-generated from folder structure
 └── package.json
 ```
 
 ## Getting Started
 
+### Prerequisites
+
+- [Docker](https://docs.docker.com/get-docker/) and Docker Compose
+- (Optional) [Node.js](https://nodejs.org/) 18+ for running without Docker
+
+### Development — live reload (recommended for writing)
+
 ```bash
-# Install dependencies
+docker compose up docs-dev
+```
+
+Open [http://localhost:3000](http://localhost:3000). Any file changes are reflected immediately.
+
+### Production — static build served by Caddy
+
+```bash
+docker compose up docs-prod
+```
+
+Open [http://localhost:8080](http://localhost:8080).
+
+### Without Docker
+
+```bash
 npm install
-
-# Start the local development server
 npm start
+```
 
-# Build the static site
+### Production build only
+
+```bash
 npm run build
 ```
 
-## Contributing
+Output goes to `build/`.
 
-- Add scripts in `docs/scripts-and-source/<language>/` with an accompanying `.md` file.
-- File post-mortems in `docs/post-mortems/` using the `template.md` as a starting point.
-- Add or update links in the relevant `docs/useful-links/` sub-folder.
+## Adding Content
+
+Sidebars are **auto-generated** from the folder structure. No config edits are needed — just add files and folders.
+
+- **New script docs** → add a `.md` file under `docs/scripts-and-source/<language>/`
+- **New post-mortem** → copy `docs/post-mortems/template.md` into a new file in the same folder
+- **New reference links** → add a `.md` file under the relevant `docs/library/` sub-folder
+- **New category** → create a folder with a `_category_.json` file:
+
+```json
+{
+  "label": "My New Category",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Description of this category."
+  }
+}
+```
+
+## Docker Details
+
+| Service | Purpose | Port | Command |
+|---|---|---|---|
+| `docs-dev` | Dev server with live reload | 3000 | `docker compose up docs-dev` |
+| `docs-prod` | Production build with Caddy | 8080 | `docker compose up docs-prod` |
+
+To rebuild the production image after changes:
+
+```bash
+docker compose build docs-prod
+docker compose up docs-prod
+```

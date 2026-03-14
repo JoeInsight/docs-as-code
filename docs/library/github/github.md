@@ -1,7 +1,7 @@
 ---
-id: bash
-title: Bash Documentation
-sidebar_position: 4 
+id: github
+title: GitHub Useful Repos
+sidebar_position: 4
 ---
 # GitHub Useful Repos
 
@@ -19,3 +19,4 @@ Useful github repos to follow.
 |OpenWeb UI | [OpenWeb UI](https://github.com/open-webui/open-webui)|
 |Microsoft Benchmark Security | [Microsoft Benchmark Security](https://github.com/MicrosoftDocs/SecurityBenchmarks)|
 |Azure Data Landing Zone | [Azure Data Landing Zone repo](https://github.com/Azure/data-landing-zone)|
+

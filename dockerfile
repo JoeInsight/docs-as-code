@@ -11,13 +11,13 @@ RUN npm install --frozen-lockfile
 COPY . .
 
 # Build the static site (output goes to /app/build)
-RUN npm run build
+RUN DOCUSAURUS_BASE_URL=/ npm run build
 
 # --- Stage 2: Serve the site with Caddy ---
 FROM caddy:2-alpine
 
 # Copy the Caddyfile configuration
-COPY Caddyfile /etc/caddy/Caddyfile
+COPY caddyfile /etc/caddy/Caddyfile
 
 # Copy the build output from the builder stage to the Caddy web root
 COPY --from=builder /app/build /var/www/html
