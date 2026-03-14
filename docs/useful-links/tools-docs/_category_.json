@@ -1,0 +1,8 @@
+{
+  "label": "Tools Documentation",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Official documentation for Terraform, Bash, PowerShell, CoreUtils, and Linux."
+  }
+}

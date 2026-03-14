@@ -1,0 +1,8 @@
+{
+  "label": "Scripts & Source Code",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Custom scripts and source code maintained as living documentation."
+  }
+}

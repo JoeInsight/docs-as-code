@@ -1,0 +1,17 @@
+# Docusaurus build output
+.docusaurus/
+build/
+
+# Node modules
+node_modules/
+
+# macOS
+.DS_Store
+
+# Editor directories
+.idea/
+.vscode/
+
+# Environment files
+.env
+.env.local
