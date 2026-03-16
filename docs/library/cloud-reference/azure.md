@@ -22,6 +22,7 @@ and documentation.
 | Azure Cloud Adoption Framework | [learn.microsoft.com/azure/cloud-adoption-framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/) | Guidance for cloud strategy, planning, and adoption |
 | Microsoft Troubleshooting | [Microsoft Troubleshooting doc](https://learn.microsoft.com/en-us/troubleshoot/)|
 | Azure FinOps | [Azure FinOps Hub](https://learn.microsoft.com/en-us/cloud-computing/finops/toolkit/hubs/finops-hubs-overview)|
+|Microsoft Funding|[Microsoft Commercial Partner Incentives Guide](https://incentiveguide.partner.microsoft.com/en-US)|
 
 ---
 
