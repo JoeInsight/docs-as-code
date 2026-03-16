@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: PowerShell Scripts — Getting Started
+title: PowerShell 
 sidebar_position: 1
 ---
 

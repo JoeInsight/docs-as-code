@@ -1,6 +1,6 @@
 ---
 id: google-cloud
-title: Google Cloud Reference Architecture
+title: Google
 sidebar_position: 3
 ---
 

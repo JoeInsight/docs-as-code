@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: Python Scripts — Getting Started
+title: Python 
 sidebar_position: 1
 ---
 

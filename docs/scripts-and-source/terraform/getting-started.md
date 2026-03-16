@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: Terraform Modules — Getting Started
+title: Terraform 
 sidebar_position: 1
 ---
 

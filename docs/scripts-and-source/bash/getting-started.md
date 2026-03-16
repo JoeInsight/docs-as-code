@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: Bash Scripts — Getting Started
+title: Bash 
 sidebar_position: 1
 ---
 

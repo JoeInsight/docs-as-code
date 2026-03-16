@@ -1,6 +1,6 @@
 ---
 id: azure
-title: Azure Reference Architecture
+title: Azure
 sidebar_position: 1
 ---
 

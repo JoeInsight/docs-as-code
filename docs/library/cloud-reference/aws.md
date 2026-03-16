@@ -1,6 +1,6 @@
 ---
 id: aws
-title: AWS Reference Architecture
+title: AWS
 sidebar_position: 2
 ---
 
