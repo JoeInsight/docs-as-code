@@ -1,6 +1,6 @@
 ---
 id: Azure AI-300
-title: Azure Code
+title: Azure Certs
 sidebar_position: 1
 ---
 
